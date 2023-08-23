@@ -10,6 +10,7 @@ layout: layout-pane.njk
 <!-- [html-validate-disable no-dup-id -- See https://github.com/alphagov/govuk-design-system/issues/2260] -->
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 The footer provides copyright, licensing and other information about your service.
 
@@ -44,8 +45,11 @@ You can add links to:
 - [cookies page](/patterns/cookies-page/)
 - terms and conditions
 - other language options
+= help content
 
 Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If you add links to ‘help’ pages, such as contact information, make sure those links are always shown consistently in your footer. Use the same link text, information and placement within the footer in every instance. This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ## Adding secondary navigation
 
