@@ -67,7 +67,7 @@ Error messages should be styled like this:
 
 {{ example({group: "patterns", item: "addresses", example: "error-messages", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
-If a postcode entered is not a real postcode, use a message like this: 
+If a postcode entered is not a real postcode, use a message like this:
 
 {{ example({group: "patterns", item: "addresses", example: "error-postcode", html: true, nunjucks: true, open: false, size: "s"}) }}
 

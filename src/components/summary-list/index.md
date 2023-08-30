@@ -70,7 +70,7 @@ To remove borders on a single row, use the `govuk-summary-list__row--no-border` 
 
 ### Showing missing information
 
-In some contexts, you might need to show rows that have missing information. This can happen when: 
+In some contexts, you might need to show rows that have missing information. This can happen when:
 
 - a user returns to an incomplete journey
 - you've added or changed the questions in a service.
@@ -78,7 +78,6 @@ In some contexts, you might need to show rows that have missing information. Thi
 Show a link to the appropriate question page in the `value` column so the user can enter the missing information, instead of showing a 'change' link on that row.
 
 {{ example({group: "components", item: "summary-list", example: "with-missing-information", html: true, nunjucks: true, open: false}) }}
-
 
 ## Summary cards
 
