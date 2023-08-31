@@ -101,23 +101,39 @@ $app-code-color: #d13118;
     @include govuk-responsive-margin(6, "bottom");
   }
 
-  // Fix monospace font size when used with relative typography
-  //
-  // Browsers automatically reduce monospace font size
-  //
-  // [1] restores the normal text size in Mozilla Firefox, Google Chrome,
-  // and Safari; this unusual style rule should also be used anywhere where
-  // you would otherwise set the font-family property to ‘monospace’.
-  // [2] restores the normal text size in Internet Explorer and Opera.
-  //
-  // source:
-  // http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
+  /// System ui-monospace (regular) font family polyfill
+  /// @link https://www.w3.org/TR/css-fonts-4/#ui-monospace-def
+  @font-face {
+    font-family: ui-monospace;
+    src:
+      // Monospace macOS
+      local("Menlo-Regular"),
+      // Monospace Windows
+      local("CascadiaMono-Regular"),
+      local("Consolas"),
+      // Monospace Android
+      local("RobotoMono-Regular");
+  }
+
+  /// System ui-monospace (bold) font family polyfill
+  /// @link https://www.w3.org/TR/css-fonts-4/#ui-monospace-def
+  @font-face {
+    font-family: ui-monospace;
+    font-weight: 700;
+    src:
+      // Monospace macOS
+      local("Menlo-Bold"),
+      // Monospace Windows
+      local("CascadiaMono-Bold"),
+      local("Consolas"),
+      // Monospace Android
+      local("RobotoMono-Bold");
+  }
+
   pre,
   code {
-    // stylelint-disable font-family-no-duplicate-names
-    font-family: monospace, monospace; // [1]
-    // stylelint-enable font-family-no-duplicate-names
-    font-size: 1em; // [2]
+    font-family: ui-monospace, monospace;
+    font-size: 1em;
   }
 }
 
